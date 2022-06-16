@@ -28,16 +28,6 @@ const updateAvatar = async (req, res) => {
   } finally {
     await fs.unlink(tempUpload);
   }
-  // try {
-  //   const resultUpload = path.join(avatarsDir, imageName);
-  //   await fs.rename(tempUpload, resultUpload);
-  //   const avatarURL = path.join("public", "avatars", imageName);
-  //   await User.findByIdAndUpdate(req.user._id, { avatarURL });
-  //   res.json({ avatarURL });
-  // } catch (error) {
-  //   await fs.unlink(tempUpload);
-  //   throw error;
-  // }
 };
 
 module.exports = updateAvatar;
